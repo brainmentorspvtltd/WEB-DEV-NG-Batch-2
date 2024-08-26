@@ -1,0 +1,193 @@
+var a ;
+undefined
+a;
+undefined
+typeof a;
+'undefined'
+a=10;
+10
+typeof a;
+'number'
+a='Amit';
+'Amit'
+typeof a;
+'string'
+var b = 100;
+undefined
+b + 200;
+300
+b;
+100
+b = b + 200;
+300
+a=1;
+1
+a=1100000000;
+1100000000
+typeof a;
+'number'
+a=90.20;
+90.2
+a= 10 + undefined;
+NaN
+a;
+NaN
+typeof a;
+'number'
+a = 10/0;
+Infinity
+typeof a;
+'number'
+a = 10 + undefined;
+NaN
+isNaN(a);
+true
+isNaN(a)?0:a;
+0
+isNaN(a)?"Something went wrong":a;
+'Something went wrong'
+a;
+NaN
+a = 100;
+100
+isNaN(a)?"Something went wrong":a;
+100
+a = 10 / 0;
+Infinity
+isFinite(a)?a:'Some thing went wrong';
+'Some thing went wrong'
+10 + "Hello";
+'10Hello'
+10 + true;
+11
+var a = true;
+undefined
+typeof a;
+'boolean'
+true + true;
+2
+a="10";
+'10'
+var b = "20";
+undefined
+a + b;
+'1020'
+b = 20;
+20
+a;
+'10'
+a  + b;
+'1020'
+parseInt(a) + b;
+30
+a = "10.20";
+'10.20'
+parseFloat(a);
+10.2
+a='Amit';
+'Amit'
+typeof a;
+'string'
+a ="Amit";
+'Amit'
+typeof a;
+'string'
+a='A';
+'A'
+typeof a;
+'string'
+a = "Let's do it ";
+"Let's do it "
+a = `ghdfkjghjfkdgjkfhdkg
+ghfdjkg
+hgkjfd`;
+'ghdfkjghjfkdgjkfhdkg\nghfdjkg\nhgkjfd'
+console.log(a);
+VM1528:1 ghdfkjghjfkdgjkfhdkg
+ghfdjkg
+hgkjfd
+undefined
+var a= 10;
+undefined
+var b = 20;
+undefined
+console.log("A is "+a+" B is "+b);
+VM1717:1 A is 10 B is 20
+undefined
+console.log(`A is ${a} B is ${b}`); // String Interpolation (ES6)
+VM1839:1 A is 10 B is 20
+undefined
+a = `Dear ${name},
+${msg}
+`;
+VM1885:2 Uncaught ReferenceError: msg is not defined
+    at <anonymous>:2:3
+(anonymous) @ VM1885:2
+var e = "Amit"[0];
+undefined
+e;
+'A'
+e + 32;
+'A32'
+e.charCodeAt();
+65
+e.charCodeAt() + 32;
+97
+e.fromCharCode(97);
+VM2213:1 Uncaught TypeError: e.fromCharCode is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM2213:1
+String.fromCharCode(97);
+'a'
+a.toUpperCase();
+VM2293:1 Uncaught TypeError: a.toUpperCase is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM2293:1
+a= "amit";
+'amit'
+a.toUpperCase();
+'AMIT'
+a= 'Amit';
+'Amit'
+typeof a;
+'string'
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+'object'
+a;
+'Amit'
+typeof a;
+'string'
+a.toUpperCase();
+'AMIT'
+a=10;
+10
+typeof a;
+'number'
+var b = new  Number(100);
+undefined
+a;
+10
+b;
+Number {100}
+typeof b;
+'object'
+var c= "Amit";
+undefined
+typeof c;
+'string'
+var d = new String("Amit");
+undefined
+d;
+String {'Amit'}
+typeof d;
+'object'
+a= "Amit";
+'Amit'
+typeof a;
+'string'
+a.toUpperCase();
+'AMIT'
+typeof a;
+'string'
