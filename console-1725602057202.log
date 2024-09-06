@@ -1,0 +1,340 @@
+// function in JS
+undefined
+function show(){
+    console.log("I am the Show ");
+}
+undefined
+typeof show;
+'function'
+show();
+VM124:2 I am the Show 
+undefined
+// function act as a type
+undefined
+var x = show;
+undefined
+var y = 100;
+undefined
+typeof y;
+'number'
+typeof x;
+'function'
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+function disp(){
+    console.log("I am the disp ");
+}
+undefined
+function show(fn){
+    fn(); 
+}
+show(disp);
+VM579:2 I am the disp 
+undefined
+// function pass as an argument
+undefined
+// show - HOF
+undefined
+// fn - callback fn
+undefined
+var arr = [10,20,30,40];
+undefined
+for(var i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+VM1011:2 10
+VM1011:2 20
+VM1011:2 30
+VM1011:2 40
+undefined
+// iterator
+undefined
+for(var i of arr){
+    console.log(i);
+}
+VM1106:2 10
+VM1106:2 20
+VM1106:2 30
+VM1106:2 40
+undefined
+arr;
+(4) [10, 20, 30, 40]
+function output(ele){
+    console.log(ele);
+}
+arr.forEach(output);
+VM1282:2 10
+VM1282:2 20
+VM1282:2 30
+VM1282:2 40
+undefined
+// named function
+undefined
+// unamed / anonymous / function expression
+undefined
+var q = 100;
+undefined
+var q = function(){
+    console.log('Function Expression ');
+}
+undefined
+q();
+VM1615:2 Function Expression 
+undefined
+// event bind / async call (network call)
+undefined
+function output(ele){
+    console.log(ele);
+}
+arr.forEach(output);
+VM1795:2 10
+VM1795:2 20
+VM1795:2 30
+VM1795:2 40
+undefined
+
+arr.forEach(function(ele){
+    console.log(ele);
+});
+VM1876:3 10
+VM1876:3 20
+VM1876:3 30
+VM1876:3 40
+undefined
+typeof arr;
+'object'
+// object - data + prop + methods
+undefined
+arr.length;
+4
+arr;
+(4) [10, 20, 30, 40]
+arr.push(1000);
+5
+arr;
+(5) [10, 20, 30, 40, 1000]
+arr.unshift(2000);
+6
+arr;
+(6) [2000, 10, 20, 30, 40, 1000]
+arr.pop();
+1000
+arr.shift();
+2000
+arr;
+(4) [10, 20, 30, 40]
+arr.splice(1,1);
+[20]
+arr;
+(3) [10, 30, 40]
+arr.splice(0);
+(3) [10, 30, 40]
+arr;
+[]
+arr = [10,20,30,40,50,60];
+(6) [10, 20, 30, 40, 50, 60]
+arr.splice(1,1,999);
+[20]
+arr;
+(6) [10, 999, 30, 40, 50, 60]
+arr.splice(1,0,8888);
+[]
+arr;
+(7) [10, 8888, 999, 30, 40, 50, 60]
+arr.splice(1,1,111,222,333);
+[8888]
+arr;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+arr.slice(2,5);
+(3) [222, 333, 999]
+arr;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+arr.slice();
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+var t = arr.slice();
+undefined
+t;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+t == arr;
+false
+arr;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [10, 111, 222, 333, 999, 30, 40, 50, 60]
+var r = arr;
+undefined
+r == arr;
+true
+r[0] = 88888;
+88888
+r;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+var g = arr.splice();
+undefined
+g;
+[]
+arr ;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+g == arr;
+false
+g[0] = 99999;
+99999
+g;
+[99999]
+var g = arr.splice();
+undefined
+g;
+[]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+g = arr.slice();
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+g;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+g == arr;
+false
+g[0] = 777777;
+777777
+g;
+(9) [777777, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+var p = [...arr]; // Spread Operator (es6)
+undefined
+p;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+p == arr;
+false
+var t = [10,20];
+undefined
+var t2 = [100,200];
+undefined
+var r = [...t, ...t2];
+undefined
+r;
+(4) [10, 20, 100, 200]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+// ARROW FUNCTION - ES6
+undefined
+var add = (a,b)=>a+b;
+undefined
+typeof add;
+'function'
+add(10,20);
+30
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr.forEach(e=>console.log(e));
+VM4061:1 88888
+VM4061:1 111
+VM4061:1 222
+VM4061:1 333
+VM4061:1 999
+VM4061:1 30
+VM4061:1 40
+VM4061:1 50
+VM4061:1 60
+undefined
+arr.slice(2,5);
+(3) [222, 333, 999]
+arr.forEach();
+VM4185:1 Uncaught TypeError: undefined is not a function
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:5
+(anonymous) @ VM4185:1
+arr.forEach(e=>console.log(e));
+VM4193:1 88888
+VM4193:1 111
+VM4193:1 222
+VM4193:1 333
+VM4193:1 999
+VM4193:1 30
+VM4193:1 40
+VM4193:1 50
+VM4193:1 60
+undefined
+arr.find(e=>e==50);
+50
+arr.find(e=>e==5000);
+undefined
+arr.findIndex(e=>e==50);
+7
+arr.findIndex(e=>e==50000);
+-1
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr.findIndex(e=>e>30);
+0
+arr.findIndex(e=>e>230);
+0
+arr.findIndex(e=>e<230);
+1
+arr.filter(e=>e<200);
+(5) [111, 30, 40, 50, 60]
+var m = arr.filter(e=>e<200);
+undefined
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+m;
+(5) [111, 30, 40, 50, 60]
+var m = arr.filter(e=>true);
+undefined
+m;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+var h = arr; // reference copy
+undefined
+var h = [...arr];
+undefined
+h;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr;
+(9) [88888, 111, 222, 333, 999, 30, 40, 50, 60]
+arr.filter(e=>e<100);
+(4) [30, 40, 50, 60]
+arr = arr.filter(e=>e>100);
+(5) [88888, 111, 222, 333, 999]
+arr;
+(5) [88888, 111, 222, 333, 999]
+arr = [10,20,30,40,50,90,100];
+(7) [10, 20, 30, 40, 50, 90, 100]
+arr;
+(7) [10, 20, 30, 40, 50, 90, 100]
+var prices = [100,999,222,4455,666,7723];
+undefined
+var prices = [100,999555,5552522,4434455,656564,7723];
+undefined
+prices.map(p=>`Rs ${p}`);
+(6) ['Rs 100', 'Rs 999555', 'Rs 5552522', 'Rs 4434455', 'Rs 656564', 'Rs 7723']
+prices.map(p=>`Rs ${p.toLocaleString('hi')}`);
+(6) ['Rs 100', 'Rs 9,99,555', 'Rs 55,52,522', 'Rs 44,34,455', 'Rs 6,56,564', 'Rs 7,723']
+prices.map(p=>p);
+(6) [100, 999555, 5552522, 4434455, 656564, 7723]
+var gst =prices.map(p=>p * 0.18);
+undefined
+gst;
+(6) [18, 179919.9, 999453.96, 798201.9, 118181.51999999999, 1390.1399999999999]
+prices;
+(6) [100, 999555, 5552522, 4434455, 656564, 7723]
+var gst =prices.map(p=>  (p + p * 0.18));
+undefined
+gst;
+(6) [118, 1179474.9, 6551975.96, 5232656.9, 774745.52, 9113.14]
